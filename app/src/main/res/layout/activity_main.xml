@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+<!--Upper Text View-->
+    <TextView
+        android:id="@+id/solution_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16sp"
+        android:text="@string/studentId"
+        android:textColor="@color/black"
+        android:textSize="32sp"
+        android:textAlignment="textEnd"
+        app:layout_constraintBottom_toTopOf="@id/result_tv"/>
+<!--Lower text View-->
+    <TextView
+        android:id="@+id/result_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16sp"
+        android:text="@string/Name"
+        android:textColor="@color/black"
+        android:textSize="62sp"
+        android:textAlignment="textEnd"
+        app:layout_constraintBottom_toTopOf="@id/button_layout"/>
+
+<!--Calculator Layout-->
+    <LinearLayout
+        android:id="@+id/button_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+<!--    First row of buttons of the calculator-->
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+<!--    Clear Button-->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_c"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="14dp"
+                android:text="@string/C"
+                android:textColor="@color/white"
+                android:textSize="32sp"
+                android:backgroundTint="#F44336"
+                app:cornerRadius="34dp"/>
+<!--    Open Bracket Button-->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_open_bracket"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="14dp"
+                android:text="@string/openbracket"
+                android:textColor="@color/white"
+                android:textSize="32sp"
+                android:backgroundTint="@color/gray"
+                app:cornerRadius="34dp"/>
+<!--    Close Bracket Button-->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_close_bracket"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="14dp"
+                android:text="@string/closebracket"
+                android:textColor="@color/white"
+                android:textSize="32sp"
+                android:backgroundTint="@color/gray"
+                app:cornerRadius="34dp"/>
+<!--    Divide Button-->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_divide"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="14dp"
+                android:text="@string/divide"
+                android:textColor="@color/white"
+                android:textSize="32sp"
+                android:backgroundTint="#FF8033"
+                app:cornerRadius="34dp"/>
+        </LinearLayout>
+
+<!--Second Row of Buttons of the calculator-->
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!--    Button 7-->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_7"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="14dp"
+                android:text="@string/_7"
+                android:textColor="@color/white"
+                android:textSize="32sp"
+                android:backgroundTint="@color/gray"
+                app:cornerRadius="34dp"/>
+            <!--    Button 8-->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_8"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="14dp"
+                android:text="@string/_8"
+                android:textColor="@color/white"
+                android:textSize="32sp"
+                android:backgroundTint="@color/gray"
+                app:cornerRadius="34dp"/>
+            <!--    Button 9-->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_9"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="14dp"
+                android:text="@string/_9"
+                android:textColor="@color/white"
+                android:textSize="32sp"
+                android:backgroundTint="@color/gray"
+                app:cornerRadius="34dp"/>
+            <!--   Multiple Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_times"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="14dp"
+                android:text="@string/times"
+                android:textColor="@color/white"
+                android:textSize="32sp"
+                android:backgroundTint="#FF8033"
+                app:cornerRadius="34dp"/>
+        </LinearLayout>
+ <!--Third Row of Buttons of the calculator-->
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!--    Button 4-->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_4"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="14dp"
+                android:text="@string/_4"
+                android:textColor="@color/white"
+                android:textSize="32sp"
+                android:backgroundTint="@color/gray"
+                app:cornerRadius="34dp"/>
+            <!--    Button 5-->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_5"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="14dp"
+                android:text="@string/_5"
+                android:textColor="@color/white"
+                android:textSize="32sp"
+                android:backgroundTint="@color/gray"
+                app:cornerRadius="34dp"/>
+            <!--    Button 6-->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_6"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="14dp"
+                android:text="@string/_6"
+                android:textColor="@color/white"
+                android:textSize="32sp"
+                android:backgroundTint="@color/gray"
+                app:cornerRadius="34dp"/>
+            <!--   Addition Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_plus"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="14dp"
+                android:text="@string/plus"
+                android:textColor="@color/white"
+                android:textSize="32sp"
+                android:backgroundTint="#FF8033"
+                app:cornerRadius="34dp"/>
+
+        </LinearLayout>
+<!--Forth Row of Buttons of the calculator-->
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!--    Button 1-->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_1"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="14dp"
+                android:text="@string/_1"
+                android:textColor="@color/white"
+                android:textSize="32sp"
+                android:backgroundTint="@color/gray"
+                app:cornerRadius="34dp"/>
+            <!--    Button 2-->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_2"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="14dp"
+                android:text="@string/_2"
+                android:textColor="@color/white"
+                android:textSize="32sp"
+                android:backgroundTint="@color/gray"
+                app:cornerRadius="34dp"/>
+            <!--    Button 3-->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_3"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="14dp"
+                android:text="@string/_3"
+                android:textColor="@color/white"
+                android:textSize="32sp"
+                android:backgroundTint="@color/gray"
+                app:cornerRadius="34dp"/>
+            <!--   Subtract Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_minus"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="14dp"
+                android:text="@string/minus"
+                android:textColor="@color/white"
+                android:textSize="32sp"
+                android:backgroundTint="#FF8033"
+                app:cornerRadius="34dp"/>
+
+        </LinearLayout>
+<!--Bottom Row of Buttons of the calculator-->
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!--   All Clear Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_ac"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="14dp"
+                android:text="@string/ac"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                android:backgroundTint="#FF3377"
+                app:cornerRadius="34dp"/>
+            <!--    Button 0-->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_0"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="14dp"
+                android:text="@string/_0"
+                android:textColor="@color/white"
+                android:textSize="32sp"
+                android:backgroundTint="@color/gray"
+                app:cornerRadius="34dp"/>
+            <!--    Dot Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_dot"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="14dp"
+                android:text="@string/dot"
+                android:textColor="@color/white"
+                android:textSize="32sp"
+                android:backgroundTint="@color/gray"
+                app:cornerRadius="34dp"/>
+            <!--   Equal Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_equals"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="14dp"
+                android:text="@string/equal"
+                android:textColor="@color/white"
+                android:textSize="32sp"
+                android:backgroundTint="#FF8033"
+                app:cornerRadius="34dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
