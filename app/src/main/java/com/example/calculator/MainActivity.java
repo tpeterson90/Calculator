@@ -15,6 +15,9 @@ import com.google.android.material.button.MaterialButton;
 import org.mozilla.javascript.Context;
 import org.mozilla.javascript.Scriptable;
 
+/**
+ * This is the main activity of the calculator app.
+ */
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
     //Variables
@@ -72,9 +75,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     /**
-     *
-     * @param btn
-     * @param id
+     * Assigns ID to the buttons and sets the onclick listener
+     * @param btn MaterialButton to be assigned
+     * @param id ID of the button
      */
     void assignID(MaterialButton btn, int id){
         btn = findViewById(id);
@@ -83,8 +86,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
     /**
-     * Called when a view has been clicked.
+     * Is the view that shows the result of the calculation
+     * Clears the solution and the result when AC is pressed
+     * Clears the last character when C is pressed
+     * Evaluates the expression and displays the result when = is pressed
      * @param view The view that was clicked.
+     *
      */
 
     @Override
@@ -118,9 +125,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     /**
-     *
-     * @param data
-     * @return
+     * Takes the string expression and evaluates it and returns the result
+     * @param data String expression to be evaluated
+     * @return String expression result
      */
 
     String getResults(String data){

@@ -45,7 +45,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-<!--    Clear Button-->
+<!--    Clear Button with color #337DFF -->
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/button_c"
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
@@ -55,7 +55,7 @@
                 android:text="@string/C"
                 android:textColor="@color/white"
                 android:textSize="32sp"
-                android:backgroundTint="#F44336"
+                android:backgroundTint="#337DFF"
                 app:cornerRadius="34dp"/>
 <!--    Open Bracket Button-->
             <com.google.android.material.button.MaterialButton
@@ -272,7 +272,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <!--   All Clear Button -->
+            <!--   All Clear Button colored #FF3377-->
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/button_ac"
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
@@ -284,7 +284,7 @@
                 android:textSize="22sp"
                 android:backgroundTint="#FF3377"
                 app:cornerRadius="34dp"/>
-            <!--    Button 0-->
+            <!--    Button 0 highlighted with background color #FF8033-->
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/button_0"
                 style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
@@ -294,7 +294,7 @@
                 android:text="@string/_0"
                 android:textColor="@color/white"
                 android:textSize="32sp"
-                android:backgroundTint="@color/gray"
+                android:backgroundTint="#FF8033"
                 app:cornerRadius="34dp"/>
             <!--    Dot Button -->
             <com.google.android.material.button.MaterialButton
